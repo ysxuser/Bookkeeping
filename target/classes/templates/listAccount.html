@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../webapp/static/css/style.css" th:href="@{/static/css/style.css}"/>
+    <script type="text/javascript" src="../../webapp/static/js/thymeleaf.js" th:src="@{/static/js/thymeleaf.js}"></script>
+</head>
+<body>
+<div class="showing">
+ 
+<table>
+  <thead>
+   <tr>
+     		<td>列表</td>
+            <td>额度</td>
+            <td>余额</td>
+            <td>扣减</td>
+   </tr>
+  </thead>
+		<tr th:each="p: ${page}">
+                <td th:text="${p.name}"></td>
+                <td th:text="${p.budget}"></td>
+                <td th:text="${p.balance}"></td>
+                <td><a th:href="@{/updateAccount(id=${p.id})}">扣减</a></td>
+            </tr>
+</table>
+ 
+</div>
+ 
+</body>
+ 
+</html>
