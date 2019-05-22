@@ -33,6 +33,7 @@ public class BookController {
 	 total.setName("合计");
 	 total.setBudget(budgets);
 	 total.setBalance(balances);
+	 System.out.println();
 	 accountLists.add(total);
 	 System.out.println(accountLists.size());
 	 m.addAttribute("page",accountLists);
