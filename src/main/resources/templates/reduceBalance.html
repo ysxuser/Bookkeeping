@@ -1,24 +1,55 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>hello</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="all" href="../../webapp/static/css/style.css" th:href="@{/static/css/style.css}"/>
-    <script type="text/javascript" src="../../webapp/static/js/thymeleaf.js" th:src="@{/static/js/thymeleaf.js}"></script>
-     
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../webapp/static/css/style.css"
+	th:href="@{/static/css/style.css}" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../webapp/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+	th:href="@{/static/bootstrap-3.3.7-dist/css/bootstrap.min.css}" />
+
+<script type="text/javascript" src="../../webapp/static/js/thymeleaf.js"
+	th:src="@{/static/js/thymeleaf.js}"></script>
+<style type="text/css">
+ .divcss5{margin:0 auto;width:400px;height:100px;border:1px solid #000} 
+ 
+div.test{
+margin:0 auto;width:700px;height:100px;border:0px solid #000; position:absolute;top:30%; left:20%;
+font-size:30px;
+}
+
+.className{
+    width:270px;
+    height:150px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-75px 0 0 -135px;
+}
+</style>
+
 </head>
 <body>
-<div style="margin:0px auto; width:500px">
-   
-    <form action="reduceBalance" method="post">
-       
-    扣减余额: <input name="aMount" /> <br/>
-       
-    <input name="id" type="hidden" th:value="${c.id}"/>
-    <button type="submit">提交</button>
-       
-    </form>
-</div>
+	<!-- <div style="margin:0px auto; width:500px"> -->
+	<form class="form-inline" action="reduceBalance" method="post">
+		<div class="test">
+		<div class="form-group">
+			<label for="exampleInputName2"><span class="glyphicon glyphicon-yen"></span></label> <input type="text"
+				class="form-control" id="exampleInputName2" placeholder="10"
+				name="aMount" />
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail2">备注: </label> <input type="text"
+				class="form-control" id="exampleInputEmail2" placeholder="午餐"
+				name="remark" />
+		</div>
+		<input name="id" type="hidden" th:value="${c.id}" />
+		<button type="submit" class="btn btn-success">提交</button>
+	</div>
+	</form>
+	<!-- </div> -->
 </body>
- 
+
 </html>

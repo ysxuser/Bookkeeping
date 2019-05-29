@@ -4,25 +4,42 @@
     <title>hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="all" href="../../webapp/static/css/style.css" th:href="@{/static/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../webapp/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" th:href="@{/static/bootstrap-3.3.7-dist/css/bootstrap.min.css}"/>
+   
     <script type="text/javascript" src="../../webapp/static/js/thymeleaf.js" th:src="@{/static/js/thymeleaf.js}"></script>
+<style type ="text/css">
+body{ text-align:center} 
+ p {color:blue;
+ 	font-size:50px;
+ }
+
+ table{
+  align:center;
+  font-size:30px;
+ }
+</style>
 </head>
 <body>
+
+<div class="page-header">
+  <h1><small>欢迎回来，小主~</small></h1>
+</div>
 <div class="showing">
  
-<table>
+<table class="table table-striped">
   <thead>
-   <tr>
+   <tr style="font-size:30px;font-weight:bold ">
      		<td>列表</td>
             <td>额度</td>
             <td>余额</td>
-            <td>扣减</td>
+            <td>操作</td>
    </tr>
   </thead>
 		<tr th:each="p: ${page}">
                 <td th:text="${p.name}"></td>
                 <td th:text="${p.budget}"></td>
                 <td th:text="${p.balance}"></td>
-                <td><a th:href="@{/updateAccount(id=${p.id})}">扣减</a></td>
+                <td><a th:href="@{/updateAccount(id=${p.id})}" class="btn btn-info btn-lg active" role="button">扣减</a></td>
             </tr>
 </table>
  
