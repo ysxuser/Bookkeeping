@@ -4,14 +4,14 @@
 <title>hello</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" media="all"
-	href="../../webapp/static/css/style.css"
-	th:href="@{/static/css/style.css}" />
+	href="../static/css/style.css"
+	th:href="@{/css/style.css}" />
 <link rel="stylesheet" type="text/css" media="all"
-	href="../../webapp/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"
-	th:href="@{/static/bootstrap-3.3.7-dist/css/bootstrap.min.css}" />
+	href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+	th:href="@{/bootstrap-3.3.7-dist/css/bootstrap.min.css}" />
 
-<script type="text/javascript" src="../../webapp/static/js/thymeleaf.js"
-	th:src="@{/static/js/thymeleaf.js}"></script>
+<script type="text/javascript" src="../static/js/thymeleaf.js"
+	th:src="@{/js/thymeleaf.js}"></script>
 <style type="text/css">
  .divcss5{margin:0 auto;width:400px;height:100px;border:1px solid #000} 
  
@@ -36,7 +36,7 @@ font-size:30px;
 	<form class="form-inline" action="reduceBalance" method="post">
 		<div class="test">
 		<div class="form-group">
-			<label for="exampleInputName2"><span class="glyphicon glyphicon-yen"></span></label> <input type="text"
+			<label for="exampleInputName2"><span class="glyphicon glyphicon-yen"></span></label> <input type="number"
 				class="form-control" id="exampleInputName2" placeholder="10"
 				name="aMount" />
 		</div>

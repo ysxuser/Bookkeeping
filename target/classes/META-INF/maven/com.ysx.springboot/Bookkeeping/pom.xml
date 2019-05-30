@@ -79,6 +79,7 @@
     </properties>
  
     <build>
+    <finalName>bookkeeping-springboot-0.0.1</finalName> <!-- 指定package生成的文件名为my-spring-boot.jar -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
